@@ -18,11 +18,7 @@ class App extends Component {
     const newContact = { id: nanoid(), name, number };
 
     contacts.some(contact => contact.name === name)
-      ? Report.warning(
-          `${name}`,
-          'This user is already in the contact list.',
-          'OK'
-        )
+      ? Report.warning(`${name}`, ' is already in the contact.', 'OK')
       : this.setState(({ contacts }) => ({
           contacts: [newContact, ...contacts],
         }));

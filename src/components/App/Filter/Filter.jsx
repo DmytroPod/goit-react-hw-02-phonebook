@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import css from './Filter.module.css';
 
 function Filter({ filter, changeFilter }) {
@@ -14,10 +13,5 @@ function Filter({ filter, changeFilter }) {
     </label>
   );
 }
-
-Filter.prototype = {
-  filter: PropTypes.string.isRequired,
-  changeFilter: PropTypes.func.isRequired,
-};
 
 export default Filter;
